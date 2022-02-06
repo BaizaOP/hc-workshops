@@ -38,7 +38,7 @@ class Particle {
     this.r = random(0,255);
     this.g = random(0,255);
     this.b = random(0,255);
-    this.color = [this.r, this.g, this.b, 100];
+    this.color = [this.r, this.g, this.b, 75];
   }
   draw() {
     circle(this.position.x, this.position.y, this.diameter);
@@ -47,6 +47,8 @@ class Particle {
   update(energy) {
     this.diameter = random(5, 7) + energy / 7.5;
     this.position.y += this.speed.y * energy / 30;
+    let a = 100 + energy * 1.3;
+    this.color = [this.r, this.g, this.b, a];
     if(this.position.y > h) {
       this.position.y = 0;
     }
