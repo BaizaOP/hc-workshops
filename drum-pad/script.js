@@ -33,10 +33,23 @@ function play(link) {
 // got this addEvent from: https://stackoverflow.com/questions/16089421/simplest-way-to-detect-keypresses-in-javascript
 addEvent(document, "keypress", function (e) {
   e = e || window.event;
+  const selected = document.querySelector(`#${String.fromCharCode(e.keyCode).toUpperCase()}`);
   if(e.keyCode >= "A".charCodeAt() && e.keyCode <= "L".charCodeAt()) {
     play(muzak[e.keyCode - "A".charCodeAt()]); 
+    selected.classList.add('on'); // kinda janky but whatever
+    setTimeout(() => {
+      selected.classList.add('off'); 
+      selected.classList.remove('on');
+      selected.classList.remove('off');
+    }, 100);
   } else if (e.keyCode >= "a".charCodeAt() && e.keyCode <= "l".charCodeAt()) {
     play(muzak[e.keyCode - "a".charCodeAt()]); 
+    selected.classList.add('on');
+    setTimeout(() => {
+      selected.classList.add('off'); 
+      selected.classList.remove('on');
+      selected.classList.remove('off');
+    }, 100);
   }
   
 });

@@ -5,7 +5,13 @@ const speech = new p5.SpeechRec('en-US', () => {
   if(speech.resultValue) {
     const rawText = speech.resultString.toUpperCase();
     const color = rawText.split(' ').join('');
-    if(isColor(color)) { 
+    // TODO: implement rainbow, maybe tile rectangles on screen and color differently?
+    // make a func?
+    /* if(color == "RAINBOW") {
+      background("YELLOW");
+      prevOKColor = "YELLOW";
+      text("RAINBOW", width/2, height/2);
+    } else */ if(isColor(color)) { 
       background(color);
       prevOKColor = color;
       text(color, width/2, height/2);
