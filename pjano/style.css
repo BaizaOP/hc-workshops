@@ -1,0 +1,56 @@
+.test {
+  float: right; 
+  position: relative; 
+  top: 10px; 
+  right: 10px;
+}
+
+.header {
+  float:left;
+}
+
+/* button#popup { */
+/*   display: inline-block; */
+/*   left: 0px;  */
+/*   top: 0px; */
+/*   position: absolute; */
+/*    */
+/*   border: .5px solid black; */
+/*   border-radius: 3px; */
+/*    */
+/*   font-size: 14px; */
+/*   padding: 2px 6px; */
+/*   margin: 3px; */
+/*   background: white; */
+/*   color: black; */
+/* } */
+/**/
+/* button#popup:hover { */
+/*   background: #FF8888; */
+/* } */
+
+
+
+body {
+  width: 75vw;
+  margin: auto;
+}
+
+#piano {
+  height: 400px;
+}
+
+.key {
+  height: 400px;
+  width: 14.2857142857%;
+  float: left;
+  border: 5px solid black;
+  border-right: none;
+  background: white;
+  text-align: center;
+  padding-top: 300px;
+}
+
+#B {
+  border-right: 5px solid black;
+}
