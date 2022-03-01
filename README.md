@@ -1,5 +1,5 @@
-# HC Workshops
-This is the repository where I will put all of the [Hackclub](https://workshops.hackclub.com/) workshops I complete!
+# Showcase
+This is the repository where I will put a bunch of smaller projects I am working on, including some of the [Hackclub](https://workshops.hackclub.com/) workshops I complete!
 
 ## How to see it?
 To see this run, run the program `python3 -m http.server`
